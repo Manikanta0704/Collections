@@ -1,0 +1,109 @@
+package Bookspack;
+
+import java.util.ArrayList;
+import java.util.List;
+
+class Book{
+	int bookId;
+	String bookName;
+	String bookAuthor;
+	int price;
+	public Book() {
+		super();
+	}
+	public Book(int bookId, String bookName, String bookAuthor, int price) {
+		super();
+		this.bookId = bookId;
+		this.bookName = bookName;
+		this.bookAuthor = bookAuthor;
+		this.price = price;
+	}
+	public int getBookId() {
+		return bookId;
+	}
+	public void setBookId(int bookId) {
+		this.bookId = bookId;
+	}
+	public String getBookName() {
+		return bookName;
+	}
+	public void setBookName(String bookName) {
+		this.bookName = bookName;
+	}
+	public String getBookAuthor() {
+		return bookAuthor;
+	}
+	public void setBookAuthor(String bookAuthor) {
+		this.bookAuthor = bookAuthor;
+	}
+	public int getPrice() {
+		return price;
+	}
+	public void setPrice(int price) {
+		this.price = price;
+	}
+	@Override
+	public String toString() {
+		return "Book [bookId=" + bookId + ", bookName=" + bookName + ", bookAuthor=" + bookAuthor + ", price=" + price
+				+ "]";
+	}
+}
+
+class BookManagement{
+	ArrayList<Book> BookList=new ArrayList<>();
+	public void addBook(Book book) {
+		BookList.add(book);
+	}
+	
+	public void removeBook(int bookId) {
+		Book bookToRemove=null;
+		for(Book book:BookList) {
+			if(book.getBookId()==bookId) {
+				System.out.println("Book not found");
+				break;
+			}
+		}
+		if(bookToRemove != null) {
+			BookList.remove(bookToRemove);
+		}
+	}
+	public void displayBooks() {
+		for(Book book:BookList) {
+			System.out.println(book);
+		}
+	}
+}
+
+public class Main {
+	public static void main(String[] args) {
+		BookManagement bm=new BookManagement();
+		Book book1=new Book(101,"Telugu","adikavi",250);
+		Book book2=new Book(102,"Hindi","gkjgsgg",190);
+		Book book3=new Book(103,"English","dshjk",170);
+		
+		
+		
+//		List<Book> book=new ArrayList();
+//		book.add(book1);
+//		book.add(book2);
+//		book.add(book3);
+//		
+//		for(Book bo:book) {
+//			System.out.println(bo);
+//		}
+		
+		
+		
+		bm.addBook(book1);
+		bm.addBook(book2);
+		bm.addBook(book3);
+			
+		bm.removeBook(106);
+		bm.displayBooks();
+//		bm.addBook(book2);
+//		bm.displayBooks();
+//		bm.removeBook(101);
+//		bm.addBook(book3);
+//		bm.displayBooks();
+	}
+}

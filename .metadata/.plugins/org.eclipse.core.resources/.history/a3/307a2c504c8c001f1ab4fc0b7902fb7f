@@ -1,0 +1,85 @@
+package program;
+
+import java.util.Comparator;
+import java.util.LinkedList;
+
+class Employee implements Comparator{
+	int empId;
+	String empName;
+	String empLoc;
+	Double Salary;
+	public Employee() {
+		super();
+	}
+	
+	public Employee(int empId, String empName, String empLoc, Double salary) {
+		super();
+		this.empId = empId;
+		this.empName = empName;
+		this.empLoc = empLoc;
+		Salary = salary;
+	}
+
+	public int getEmpId() {
+		return empId;
+	}
+
+	public void setEmpId(int empId) {
+		this.empId = empId;
+	}
+
+	public String getEmpName() {
+		return empName;
+	}
+
+	public void setEmpName(String empName) {
+		this.empName = empName;
+	}
+
+	public String getEmpLoc() {
+		return empLoc;
+	}
+
+	public void setEmpLoc(String empLoc) {
+		this.empLoc = empLoc;
+	}
+
+	public Double getSalary() {
+		return Salary;
+	}
+
+	public void setSalary(Double salary) {
+		Salary = salary;
+	}
+
+	@Override
+	public String toString() {
+		return "Employee [empId=" + empId + ", empName=" + empName + ", empLoc=" + empLoc + ", Salary=" + Salary + "]";
+	}
+
+	@Override
+	public int compare(Object o1, Object o2) {
+		return Double.compare(o1.Salary, o2.Salary);;
+	}
+	
+	
+	
+}
+public class Test {
+	public static void main(String[] args) {
+		Employee emp1=new Employee(101,"Srinu","Tatipaka",25000.0);
+		Employee emp2=new Employee(102,"Pavan","Tuni",30000.0);
+		Employee emp3=new Employee(101,"Lokesh","Polavaram",25000.0);
+		Employee emp4=new Employee(102,"Pavan","Tuni",30000.0);
+		
+		
+		LinkedList<Employee> list=new LinkedList();
+		list.add(emp1);
+		list.add(emp2);
+		list.add(emp3);
+		list.add(emp4);
+		list.stream()
+		.sorted(new Employee())
+		.forEach(a->System.out.println(a));
+	}
+}

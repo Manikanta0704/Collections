@@ -1,0 +1,13 @@
+package program;
+
+import java.util.Optional;
+
+public class OptionalClass {
+	public static void main(String[] args) {
+		Integer i=Optional.of(getValue)
+	}
+	public static Integer getValue() {
+		return null;
+	}
+
+}

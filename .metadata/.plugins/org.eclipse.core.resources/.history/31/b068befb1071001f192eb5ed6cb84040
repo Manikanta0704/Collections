@@ -1,0 +1,12 @@
+package mypack;
+
+import java.net.MulticastSocket;
+
+public class Test {
+	public static void main(String[] args) {
+		int[] arr1= {624};
+		int[] arr2= {31};
+		System.out.println(arr1[0]*arr2[0]);
+	}
+
+}

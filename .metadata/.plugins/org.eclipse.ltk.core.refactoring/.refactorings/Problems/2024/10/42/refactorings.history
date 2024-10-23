@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;com.prblm.BinaryToLinear&apos; to &apos;BinaryToDecimal&apos;&#x0D;&#x0A;- Original project: &apos;Problems&apos;&#x0D;&#x0A;- Original element: &apos;com.prblm.BinaryToLinear&apos;&#x0D;&#x0A;- Renamed element: &apos;com.prblm.BinaryToDecimal&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;BinaryToLinear&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;com.prblm{BinaryToLinear.java[BinaryToLinear" matchStrategy="1" name="BinaryToDecimal" qualified="false" references="true" similarDeclarations="false" stamp="1729254582452" textual="false" version="1.0"/>
+</session>
